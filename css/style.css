@@ -1,0 +1,47 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
+body {
+  font-family: "PT Serif", serif;
+}
+
+.todo-app__header {
+  margin-bottom: 1rem;
+}
+
+.todo-app__main {
+  padding: 0 0.6rem;
+}
+
+.todo-form {
+  margin-bottom: 0.8rem;
+}
+
+.todo-list {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.todo-item--checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item__text {
+  width: 200px;
+}
+
+.todo-item__delete {
+  height: 1.6rem;
+  width: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
