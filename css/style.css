@@ -2,14 +2,39 @@
 @import url("https://fonts.googleapis.com/css2?family=PT Serif:wght@400;700&display=swap");
 
 :root {
-  font-size: 20px;
-
   --background: #191724;
 
   --accent: #ff70e4;
   --primary: #77e98c;
   --secondary: #1e1e2e;
   --text: #e0def4;
+}
+
+@media only screen and (max-width: 640) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1280px) {
+  :root {
+    font-size: 22px;
+  }
 }
 
 body {
