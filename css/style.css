@@ -10,7 +10,7 @@
   --text: #e0def4;
 }
 
-@media only screen and (max-width: 640) {
+@media only screen and (max-width: 768px) {
   :root {
     font-size: 16px;
   }
@@ -166,7 +166,7 @@ body {
 
   hyphens: manual;
 
-  inline-size: 210px;
+  inline-size: 150px;
   overflow-wrap: break-word;
 }
 
