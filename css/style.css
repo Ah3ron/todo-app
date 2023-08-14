@@ -1,47 +1,162 @@
 @import url(reset.css);
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT Serif:wght@400;700&display=swap");
+
+:root {
+  font-size: 20px;
+
+  --background: #191724;
+
+  --accent: #ff70e4;
+  --primary: #77e98c;
+  --secondary: #1e1e2e;
+  --text: #e0def4;
+}
 
 body {
   font-family: "PT Serif", serif;
+
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.todo-app {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .todo-app__header {
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .todo-app__main {
-  padding: 0 0.6rem;
+  padding: 0 1rem;
 }
 
 .todo-form {
-  margin-bottom: 0.8rem;
+  display: flex;
+
+  margin-bottom: 1rem;
+}
+
+.todo-form__input {
+  font-size: inherit;
+
+  box-sizing: content-box;
+  padding: 0rem 1rem;
+
+  transition: border 0.1s;
+
+  color: inherit;
+  border: solid 2px var(--primary);
+  border-radius: 999em 40px 40px 999em;
+  outline: 0;
+  background-color: var(--secondary);
+}
+
+.todo-form__input:focus {
+  border-color: var(--accent);
+}
+
+.todo-form__button {
+  font-size: inherit;
+
+  padding: 0.6rem;
+  padding-right: 1rem;
+
+  transition: 0.1s;
+
+  border: 0;
+  border-radius: 40px 999em 999em 40px;
+  background-color: var(--primary);
+}
+
+.todo-form__button:hover {
+  background-color: var(--accent);
 }
 
 .todo-list {
   display: flex;
-  gap: 0.4rem;
   flex-direction: column;
+
+  gap: 0.6rem;
 }
 
 .todo-item {
   display: flex;
   align-items: center;
+
+  padding: 0.4rem;
+
+  border-radius: 0.6rem;
+  background-color: var(--secondary);
+
   gap: 0.6rem;
 }
 
 .todo-item--checked {
   text-decoration: line-through;
-  color: gray;
+
+  color: #d0def499;
+}
+
+.todo-item__done {
+  position: relative;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  width: 1rem;
+  height: 1rem;
+
+  border: solid 1px var(--accent);
+  border-radius: 0.2rem;
+  background-color: var(--background);
+
+  appearance: none;
+}
+
+.todo-item__done:checked {
+  color: rgba(0, 0, 0, 0.075);
+  background-color: var(--accent);
+  background-size: auto, auto;
+}
+
+.todo-item__done:checked:after {
+  position: relative;
+
+  display: flex;
+
+  width: inherit;
+  height: inherit;
+
+  content: url(../icons/check.svg);
+
+  color: #99a1a7;
+
+  fill: var(--text);
 }
 
 .todo-item__text {
-  width: 200px;
+  flex-grow: 1;
+
+  hyphens: manual;
+
+  inline-size: 210px;
+  overflow-wrap: break-word;
 }
 
 .todo-item__delete {
-  height: 1.6rem;
-  width: 1.6rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+
+  width: 1.6rem;
+  height: 1.6rem;
+
+  color: #ffffff;
+  border: 0;
+  background-color: transparent;
+
+  filter: invert(77%) sepia(35%) saturate(6060%) hue-rotate(281deg) brightness(103%) contrast(101%);
 }
